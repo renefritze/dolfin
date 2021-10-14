@@ -20,7 +20,7 @@
 #include <vector>
 #include <iomanip>
 #include <boost/cstdint.hpp>
-#include <boost/detail/endian.hpp>
+#include <boost/endian.hpp>
 
 #include "pugixml.hpp"
 
@@ -614,9 +614,9 @@ void VTKFile::vtk_header_open(std::size_t num_vertices, std::size_t num_cells,
   std::string endianness = "";
   if (encode_string == "binary")
   {
-    #if defined BOOST_LITTLE_ENDIAN
+    #if BOOST_ENDIAN_LITTLE_BYTE
     endianness = "byte_order=\"LittleEndian\"";
-    #elif defined BOOST_BIG_ENDIAN
+    #elif BOOST_ENDIAN_BIG_BYTE
     endianness = "byte_order=\"BigEndian\"";;
     #else
     dolfin_error("VTKFile.cpp",
