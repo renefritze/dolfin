@@ -28,6 +28,7 @@
 #include <vector>
 
 #include <memory>
+#include <algorithm>
 #include <unordered_set>
 #include <dolfin/common/Hierarchical.h>
 #include <dolfin/common/MPI.h>
