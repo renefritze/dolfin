@@ -18,7 +18,7 @@ RESTRICT_REQUIREMENTS = ">=2019.1.0,<2019.2"
 
 REQUIREMENTS = ["numpy",
                 "pkgconfig",
-                "pybind11==2.2.4",
+                "pybind11",
                 "fenics-ffc{}".format(RESTRICT_REQUIREMENTS),
                 "fenics-ufl{}".format(RESTRICT_REQUIREMENTS),
                 "fenics-dijitso{}".format(RESTRICT_REQUIREMENTS)]
